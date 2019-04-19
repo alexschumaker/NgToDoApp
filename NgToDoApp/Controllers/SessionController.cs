@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
+// despite the name, this service uses static variables to persist data--not session cookies.
 namespace NgToDoApp.Controllers
 {
     [Route("api/[controller]")]
