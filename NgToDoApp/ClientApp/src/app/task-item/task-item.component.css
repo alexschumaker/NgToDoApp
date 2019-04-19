@@ -87,6 +87,7 @@
 .editField {
   border-radius: 10px;
   padding-left: 6px;
+  width: 270px;
   top: 0;
   height: 24px;
   border: none;
