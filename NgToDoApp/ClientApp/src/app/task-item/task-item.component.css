@@ -1,0 +1,131 @@
+.toDoListItem {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, .4);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* CHECKBOX */
+.checkContainter {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: 22%;
+  left: 2%;
+}
+
+.checkContainter input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 6px;
+
+  transition: background-color .5s;
+}
+
+.checkContainter:hover input ~ .checkmark {
+  background-color: lightgrey;
+}
+
+.checkContainter input:checked ~ .checkmark {
+  background-color: mediumaquamarine;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkContainter input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkContainter .checkmark:after {
+  left: 10px;
+  top: 6px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ^^^ CHECKBOX ^^^ */
+
+.description {
+  position: relative;
+  width: max-content;
+  display: table;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.editField {
+  border-radius: 10px;
+  padding-left: 6px;
+  top: 0;
+  height: 24px;
+  border: none;
+}
+
+.buttons {
+  position: relative;
+  display: table;
+  width: max-content;
+  left: 100%;
+  top: -30%;
+  transform: translateX(-116%);
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  padding: 2px 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+  user-select: none;
+
+  transition: background-color .5s;
+}
+
+.button:hover {
+    background-color: lightgrey;
+}
+
+.deleteButton {
+  margin-left: 10px;
+}
+
+.editButton {
+  width: 50px;
+  padding-left: 0;
+  padding-right: 0;
+}

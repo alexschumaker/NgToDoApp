@@ -1,6 +1,66 @@
-@media (max-width: 767px) {
-  /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-  .body-content {
-    padding-top: 50px;
-  }
+h1 {
+  text-align:center;
 }
+
+#app-container {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+  width: 540px;
+  min-height: 50%;
+
+  background-color: mediumaquamarine;
+  border-radius: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+}
+
+li {
+
+}
+
+#addTaskBar {
+  position: relative;
+  width: max-content;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin-bottom: 20px;
+}
+
+#newTaskButton {
+  position: relative;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  padding: 2px 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 0px 10px 10px 0px;
+  top: -1px;
+
+  transition: background-color .5s;
+}
+
+#newTaskButton:hover {
+  background-color: lightgrey;
+}
+
+#newTaskField {
+  border-radius: 10px 0px 0px 10px;
+  padding-left: 6px;
+  top:0;
+  height: 28px;
+  border: none;
+}
+
+
+

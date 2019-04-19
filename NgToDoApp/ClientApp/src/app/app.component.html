@@ -1,6 +1,20 @@
 <body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
+  <h1>To Do List</h1>
+
+  <div id="app-container">
+
+    <ul>
+      <li *ngFor="let task of tasklist; index as i">
+        <app-task-item [task]="task" [index]="i"></app-task-item>
+      </li>
+    </ul>
+
+    <div id="addTaskBar">
+      <input id="newTaskField" type="text" [(ngModel)]="newTaskInput" (keyup.enter)="addTask(newTaskInput)" autocomplete="off" />
+      <button id="newTaskButton" (click)="addTask(newTaskInput)">Add Task</button>
+    </div>
+    <!--<button (click)="testFunc()">TEST</button>
+    <button (click)="update()">Update</button>-->
+
   </div>
 </body>

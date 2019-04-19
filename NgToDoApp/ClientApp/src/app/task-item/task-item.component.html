@@ -1,0 +1,15 @@
+<div class="toDoListItem">
+  <label class="checkContainter">
+    <input class="checkbox" type="checkbox" [checked]="task.completed" (click)="toggleCompleted(index)" />
+    <span class="checkmark"></span>
+  </label>
+  <div class="description">
+    <span *ngIf="!editing">{{task.description}}</span>
+    <input class="editField" *ngIf="editing" [(ngModel)]="edits" (keyup.enter)="toggleEdits()" autocomplete="off" autofocus/>
+  </div>
+
+  <div class="buttons">
+    <button class="editButton button" type="button" (click)="toggleEdits()">{{editButtonState}}</button>
+    <button class="deleteButton button" type="button" (click)="deleteItem()">Delete</button>
+  </div>
+</div>
